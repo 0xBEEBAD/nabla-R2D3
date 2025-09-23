@@ -1,4 +1,4 @@
-# Nabla-R2D3: Effective and Efficient 3D Diffusion Alignment with 2D Rewards
+# [NeurIPS-2025] Nabla-R2D3: Effective and Efficient 3D Diffusion Alignment with 2D Rewards
 This is the official implementation of [Nabla-R2D3](http://nabla-r2d3.github.io/), which is a highly effective and sample-efficient reinforcement learning alignment framework for 3D-native diffusion models using pure 2D rewards.
 
 ## TODO List:
@@ -17,7 +17,7 @@ This is the official implementation of [Nabla-R2D3](http://nabla-r2d3.github.io/
   ```  
 - [Optional] Install a custom Diffusers package (if using BF16 precision).
   ```bash  
-  ## ready soon
+  ## ready soon  ## see my modified repo: [https://github.com/MobiusLqm/diffusers](https://github.com/MobiusLqm/diffusers/tree/v0.32.0_TrickMixPrecision)
   ``` 
   This branch mainly modifies the setting of transformers to use FP32 precision before feeding hidden feature into the softmax function. This change improves numerical stability while avoiding excessive GPU memory consumption.
 
@@ -88,5 +88,6 @@ Here we provide the training scripts using DiffSplat-Pixart-Sigma as the base mo
     Example: `output/Cached_embedding/pas_embedding_G-obj-83k/normal_yoso_rewards_First10000.npy`.  
   - `config.experiment.reward_threshold`: Sets the filtering threshold for rewards when using normal reward mode.  
   - `config.diffsplat.random_view`: Determines whether to add random camera pose perturbations, fixed at 20°.  
+
 
 
